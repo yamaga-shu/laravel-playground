@@ -1,0 +1,13 @@
+name: laravel-playground
+services:
+  laravel-playground:
+    container_name: laravel-playground
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    entrypoint: php artisan octane:frankenphp --workers=1 --max-requests=1 --watch
+    volumes:
+      - ../:/app
+    ports:
+      - "8000:8000"
+    tty: true
