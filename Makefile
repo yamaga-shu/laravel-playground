@@ -10,8 +10,8 @@ build:
 ### install: プロジェクト内のパッケージをインストールします
 .PHONY: install
 install:
-	@$(DOCKER_COMPOSE) run --rm --entrypoint "composer install" api-service && \
-	$(DOCKER_COMPOSE) run --rm --entrypoint "npm i" api-service
+	@$(DOCKER_COMPOSE) run --rm --entrypoint "composer install" laravel-playground && \
+	$(DOCKER_COMPOSE) run --rm --entrypoint "npm i" laravel-playground
 
 ### up: Dockerコンテナイメージをデタッチモードで開始します
 .PHONY: up
