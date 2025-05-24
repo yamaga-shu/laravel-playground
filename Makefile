@@ -22,3 +22,8 @@ up:
 .PHONY: down
 down:
 	@$(DOCKER_COMPOSE) down
+
+### test: テストスイートを実施します
+.PHONY: test
+test:
+	@$(DOCKER_COMPOSE) run --rm --entrypoint "php artisan test" laravel-playground
