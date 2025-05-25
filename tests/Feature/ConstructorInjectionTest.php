@@ -56,7 +56,9 @@ class SmsNotifier implements Notifier {
 }
 
 class NotificationService {
-    public function __construct(public Notifier $notifier) {}
+    public function __construct(
+        public Notifier $notifier
+    ) {}
 }
 
 it('can contextually bind a notifier implementation', function () {
